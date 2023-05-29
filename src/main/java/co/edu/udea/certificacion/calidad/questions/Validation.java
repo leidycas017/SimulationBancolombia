@@ -12,7 +12,7 @@ public class Validation implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         String titulo = Text.of(VALIDACION).viewedBy(actor).asString();
-        if(titulo.equalsIgnoreCase(TEXT_TO_VALIDATE)){
+        if(titulo.contains(TEXT_TO_VALIDATE)){
             return true;
         }else{
             return false;
